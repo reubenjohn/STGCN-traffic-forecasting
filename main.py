@@ -55,7 +55,7 @@ else:
 
 # Calculate graph kernel
 L = scaled_laplacian(W)
-Lk = first_approx(W, n).
+Lk = first_approx(W, n)
 # Lk = cheb_poly_approx(L, Ks, n)
 tf.add_to_collection(name='graph_kernel', value=tf.cast(tf.constant(Lk), tf.float32))
 
